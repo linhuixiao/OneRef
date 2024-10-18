@@ -1,7 +1,16 @@
 # OneRef
-[NeurIPS 2024] OneRef: Unified One-tower Expression Grounding and Segmentation with Mask Referring Modeling.
+[**[NeurIPS 2024] OneRef: Unified One-tower Expression Grounding and Segmentation with Mask Referring Modeling.**](https://neurips.cc/virtual/2024/poster/93378)
 
 The code is currently being tidied up, and both the code and model will be made publicly available soon!
+
+
+
+
+<h3 align="left">
+Links: 
+<a href="https://arxiv.org/abs/2410.08021">ArXiv</a>, 
+<a href="https://neurips.cc/virtual/2024/poster/93378">NeurIPS 2024</a>
+</h3>
 
 ## Citation
 
