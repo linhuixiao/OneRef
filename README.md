@@ -97,12 +97,12 @@ The code is currently being tidied up, and both the code and model will be made 
 
 ## Highlight
 
-- (i) **We pioneer the application of mask modeling to referring tasks by introducing a novel paradigm called mask referring modeling.** This paradigm
+- **(i) We pioneer the application of mask modeling to referring tasks by introducing a novel paradigm called mask referring modeling.** This paradigm
 effectively models the referential relation between visual and language. 
-- (ii) **Diverging from previous works, we propose a remarkably concise one-tower framework for grounding and referring 
+- **(ii) Diverging from previous works, we propose a remarkably concise one-tower framework for grounding and referring 
 segmentation in a unified modality-shared feature space.** Our model eliminates the commonly used modality 
 interaction modules, modality fusion en-/decoders, and special grounding tokens. 
-- (iii) **We extensively validate the effectiveness of OneRef in three referring tasks on five datasets.** Our method consistently
+- **(iii) We extensively validate the effectiveness of OneRef in three referring tasks on five datasets.** Our method consistently
 surpasses existing approaches and achieves SoTA performance across several settings, providing a
 valuable new insights for future grounding and referring segmentation research.
 
@@ -114,10 +114,10 @@ and referring segmentation works heavily rely on bulky Transformer-based fusion
 en-/decoders and a variety of early-stage interaction technologies. Simultaneously,
 the current mask visual language modeling (MVLM) fails to capture the nuanced
 referential relationship between image-text in referring tasks. In this paper, we
-propose OneRef, a minimalist referring framework built on the modality-shared
-one-tower transformer that unifies the visual and linguistic feature spaces. To
-modeling the referential relationship, we introduce a novel MVLM paradigm called
-Mask Referring Modeling (MRefM), which encompasses both referring-aware
+propose **OneRef, a minimalist referring framework built on the modality-shared
+one-tower transformer that unifies the visual and linguistic feature spaces**. To
+modeling the referential relationship, we introduce a novel **MVLM paradigm** called
+**Mask Referring Modeling (MRefM)**, which encompasses both referring-aware
 mask image modeling and referring-aware mask language modeling. Both modules not 
 only reconstruct modality-related content but also cross-modal referring
 content. Within MRefM, we propose a referring-aware dynamic image masking
@@ -364,15 +364,15 @@ masking ratio beyond and within the referred region. </p>**
 
 
 ## Visualization
-<p align="center"> <img src='docs/fig6.jpg' align="center" width="70%"> </p>
+<p align="center"> <img src='docs/fig6.jpg' align="center" width="80%"> </p>
   
 **<p align="center">  Qualitative results on the RefCOCO-val dataset. </p>**
 
-<p align="center"> <img src='docs/fig7.jpg' align="center" width="70%"> </p>
+<p align="center"> <img src='docs/fig7.jpg' align="center" width="80%"> </p>
   
 **<p align="center">  Qualitative results on the RefCOCO+-val dataset. </p>**
 
-<p align="center"> <img src='docs/fig8.jpg' align="center" width="70%"> </p>
+<p align="center"> <img src='docs/fig8.jpg' align="center" width="80%"> </p>
   
 **<p align="center">  Qualitative results on the RefCOCOg-val dataset. </p>**
 
@@ -397,14 +397,9 @@ We also thank the great previous work including [TransVG](https://github.com/lin
 Thanks [Microsoft](https://github.com/microsoft/unilm) for their awesome models.
 
 
-
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=linhuixiao/HiVG&type=Date)](https://star-history.com/#linhuixiao/HiVG&Date)
-
-
-
-
+[![Star History Chart](https://api.star-history.com/svg?repos=linhuixiao/OneRef&type=Date)](https://star-history.com/#linhuixiao/OneRef&Date)
 
 
 
