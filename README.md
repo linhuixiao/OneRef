@@ -397,17 +397,10 @@ We also thank the great previous work including [TransVG](https://github.com/lin
 Thanks [Microsoft](https://github.com/microsoft/unilm) for their awesome models.
 
 
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=linhuixiao/OneRef&type=Date)](https://star-history.com/#linhuixiao/OneRef&Date)
-
-
-
-
-
-
-
-
 
 
 
