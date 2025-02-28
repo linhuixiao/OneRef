@@ -51,10 +51,10 @@ Any kind discussions are welcomed!
 ## News
 
 - **All of the code and models will be released soon!**
-- :fire: **Update on 2024/12/28: We conducted a survey of Visual Grounding over the past decade, entitled "Towards Visual Grounding: A Survey" ([Paper](https://arxiv.org/pdf/2412.20206), [Project](https://github.com/linhuixiao/Awesome-Visual-Grounding)), Comments are welcome !!!**
-- :fire: **Update on 2024/10/10: Our new work **OneRef** has been accepted by the top conference NeurIPS 2024 ! ([paper](https://arxiv.org/abs/2410.08021), [github](https://github.com/linhuixiao/OneRef))**
-- **Update on 2024/07/16:** Our grounding work HiVG ([Publication](https://dl.acm.org/doi/abs/10.1145/3664647.3681071), [Paper](https://openreview.net/pdf?id=NMMyGy1kKZ), [Code](https://github.com/linhuixiao/HiVG)) has been accepted by the top conference ACM MM 2024 !
-- **Update on 2023/9/25:** Our grounding work CLIP-VG has been accepted by the top journal IEEE Transaction on Multimedia (2023)! ([paper](https://ieeexplore.ieee.org/abstract/document/10269126), [github](https://github.com/linhuixiao/CLIP-VG))
+- :fire: **Update on 2024/12/28: We conducted a Survey of Visual Grounding over the past decade, entitled "Towards Visual Grounding: A Survey" ([Paper](https://arxiv.org/pdf/2412.20206), [Project](https://github.com/linhuixiao/Awesome-Visual-Grounding)), Comments are welcome !!!**
+- :fire: **Update on 2024/10/10: Our grounding work **OneRef** ([paper](https://arxiv.org/abs/2410.08021), [Code](https://github.com/linhuixiao/OneRef)) has been accepted by the top conference NeurIPS 2024 !**
+- **Update on 2024/07/16:** **Our grounding work HiVG ([Publication](https://dl.acm.org/doi/abs/10.1145/3664647.3681071), [Paper](https://openreview.net/pdf?id=NMMyGy1kKZ), [Code](https://github.com/linhuixiao/HiVG)) has been accepted by the top conference ACM MM 2024 !**
+- **Update on 2023/9/25:** **Our grounding work CLIP-VG ([paper](https://ieeexplore.ieee.org/abstract/document/10269126), [Code](https://github.com/linhuixiao/CLIP-VG)) has been accepted by the top journal IEEE Transaction on Multimedia (2023)!** 
 
 
 ## Citation
