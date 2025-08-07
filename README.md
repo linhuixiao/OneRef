@@ -33,6 +33,7 @@
 <br />
 
 
+
 <p align="center"> <img src='docs/fig1.jpg' align="center" width="95%"> </p>
 
 **<p align="center"> A Comparison between OneRef model and the mainstream REC/RES architectures. </p>**
@@ -260,6 +261,7 @@ the results or encounter errors, please contact us promptly via email or by rais
 We will check and upload the correct models. This might be due to model upload errors or model corruption 
 during disk storage. After all, we trained nearly a hundred models during the research course of this work.**
 
+<a href="https://huggingface.co/xiaolinhui/OneRef/tree/main"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/huggingface-color.png" /><img height="36px" width="36px" src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/huggingface-color.png" /></picture><br/>HuggingFace： 
 All the models are publicly available on the [**OneRef Huggingface homepage**](https://huggingface.co/xiaolinhui/OneRef/tree/main). You can freely download the corresponding models on this website.
 
 ### REC task: Single-dataset fine-tuning checkpoints download
