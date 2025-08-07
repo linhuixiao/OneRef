@@ -50,9 +50,9 @@ Any kind discussions are welcomed!
 
 ## News
 
-- :fire: **Update on 2025/07/30:** All of the code and models have been released!**
+- :fire: **Update on 2025/07/30:** **All of the code and models have been released!**
 
-  ! During the code tidying process, some bugs may arise due to changes in variable names. If any issues occur, please raise them in the [issue page](https://github.com/linhuixiao/OneRef/issues), and I will try to resolve them timely.
+  :exclamation: During the code tidying process, some bugs may arise due to changes in variable names. If any issues occur, please raise them in the [issue page](https://github.com/linhuixiao/OneRef/issues), and I will try to resolve them timely.
 
 - :fire: **Update on 2024/12/28: We conducted a Survey of Visual Grounding over the past decade, entitled "Towards Visual Grounding: A Survey" ([Paper](https://arxiv.org/pdf/2412.20206), [Project](https://github.com/linhuixiao/Awesome-Visual-Grounding)), Comments are welcome !!!**
 - :fire: **Update on 2024/10/10: Our grounding work **OneRef** ([paper](https://arxiv.org/abs/2410.08021), [Code](https://github.com/linhuixiao/OneRef)) has been accepted by the top conference NeurIPS 2024 !**
@@ -178,8 +178,10 @@ Finally, the `$/path_to_image_data` folder will have the following structure:
 - ```$/path_to_image_data/image_data/referit/images/```: Image data for ReferItGame.
 
 ## Text-Box Anotations 
-The labels in the fully supervised scenario is consistent with previous works such as [TransVG](https://github.com/linhuixiao/TransVG).
+The labels in the fully supervised scenario is consistent with previous works such as [CLIP-VG](https://github.com/linhuixiao/CLIP-VG).
 
+:star: As we need to conduct pre-training with mixed datasets, we have shuffled the order of the datasets and unified 
+some of the dataset formats. You need to download our text annotation files from the [HuggingFace homepage](https://huggingface.co/xiaolinhui/OneRef/tree/main/text_box_annotation).
 
 ### Fully supervised setting
 <table>
@@ -191,18 +193,18 @@ The labels in the fully supervised scenario is consistent with previous works su
     <th style="text-align:center" > RefCOCOg-u </th>
     <th style="text-align:center" > ReferIt </th>
     <th style="text-align:center" > Flickr </th>
-    <th style="text-align:center" > Mixup1 </th>
-    <th style="text-align:center" > Mixup2 </th>
+    <th style="text-align:center" > mixup_with_refc </th>
+    <th style="text-align:center" > mixup_with_refc_referit </th>
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> url, size </th> <!-- table head -->
-        <th style="text-align:center" colspan="8"> <a href="https://drive.google.com/file/d/1ituKSxWU5aXsGnXePd7twv7ImJoFiATc/view?usp=drive_link">All of six datasets</a>,  89.0MB </th>  <!-- table head -->
+        <th style="text-align:center" colspan="8"> <a href="https://huggingface.co/xiaolinhui/OneRef/tree/main/text_box_annotation">All of six datasets</a>,  89.0MB </th>  <!-- table head -->
 </tr>
 </table>
 
-\* The mixup1 denotes the mixup of the training data from RefCOCO/+/g-umd (without use gref), which used in RES task. The mixup2 denotes the 
+\* The `mixup_with_refc` denotes the mixup of the training data from RefCOCO/+/g-umd (without use gref), which used in RES task. The `mixup_with_refc_referit` denotes the 
 mixup of the training data from RefCOCO/+/g (without use gref) and ReferIt Game, which used in REC task. The val and test split of both Mixup1
-and Mixup2 are used the val and testA file from RefCOCOg. The training data in RefCOCOg-g (i.e., gref) exist data leakage.
+and Mixup2 are used the val and testA file from RefCOCOg. <u>The training data in RefCOCOg-g (i.e., gref) exist data leakage.</u>
 
 
 Download the above annotations to a disk directory such as `$/path_to_split`; then will have the following similar directory structure:
@@ -220,14 +222,14 @@ Download the above annotations to a disk directory such as `$/path_to_split`; th
     │   ├── gref_umd_test.pth
     │   ├── gref_umd_train.pth
     │   └── gref_umd_val.pth
-    ├── mixup1
-    │   ├── mixup1_test.pth
-    │   ├── mixup1_train.pth
-    │   └── mixup1_val.pth
-    ├── mixup2
-    │   ├── mixup2_test.pth
-    │   ├── mixup2_train.pth
-    │   └── mixup2_val.pth
+    ├── mixup_with_refc
+    │   ├── mixup_test.pth
+    │   ├── mixup_train.pth
+    │   └── mixup_val.pth
+    ├── mixup_with_refc_referit
+    │   ├── mixup_test.pth
+    │   ├── mixup_train.pth
+    │   └── mixup_val.pth
     ├── referit
     │   ├── referit_test.pth
     │   ├── referit_train.pth
@@ -387,7 +389,7 @@ the five datasets at once and just using a single script.
  the MRefM pre-training **for the RES task** is mainly carried out through a mixture of the RefC datasets. 
  
 For MRefM pre-training, the base model took 15 hours on 32 NVIDIA A100 GPUs, while the large model took 50 hours on 
-the same number of GPUs. We provide the MRefM pre-trained checkpoints at the following: 
+the same number of GPUs. We provide the MRefM pre-trained checkpoints at the following: All model are placed in [HuggingFace Page](https://huggingface.co/xiaolinhui/OneRef/tree/main)
 
 
 <table>
@@ -399,12 +401,12 @@ the same number of GPUs. We provide the MRefM pre-trained checkpoints at the fol
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  Base model  </th> <!-- table head -->
         <th style="text-align:center" rowspan="1">  RefC,ReferIt </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href=" ">rec_mrefm_base_patch16_384, ~580 MB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href=" ">rec_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" > Large model </th>
         <th style="text-align:center" rowspan="1">  RefC,ReferIt </th> <!-- table head -->
-    <th style="text-align:center" > <a href=" ">rec_mrefm_large_patch16_384, ~1.6 GB</a> </th>
+    <th style="text-align:center" > <a href=" ">rec_mrefm_large_patch16_384, ~7 GB</a> </th>
     </tr>
 </table>
 
@@ -419,12 +421,12 @@ the same number of GPUs. We provide the MRefM pre-trained checkpoints at the fol
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  Base model </th> <!-- table head -->
         <th style="text-align:center" > RefC </th>
-        <th style="text-align:center" colspan="1"> <a href=" ">res_mrefm_base_patch16_384, ~375 MB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href=" ">res_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" >  Large model  </th>
     <th style="text-align:center" > RefC </th>
-    <th style="text-align:center" > <a href=" ">res_mrefm_base_patch16_384, ~1.6 GB</a> </th>
+    <th style="text-align:center" > <a href=" ">res_mrefm_base_patch16_384, ~7 GB</a> </th>
     </tr>
 </table>
 
@@ -443,19 +445,19 @@ the [BEiT-3 official repository](https://github.com/microsoft/unilm/tree/master/
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  Sentencepiece model (Tokenizer) </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="">sp3 Sentencepiece model, xx MB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/beit3_checkpoints/beit3.spm">sp3 Sentencepiece model, 1 MB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  MIM VQKD model </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="">vqkd model, xx MB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/beit3_checkpoints/vqkd_encoder_base_decoder_3x768x12_clip-d5036aa7.pth">vqkd model, 438 MB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> BEiT-3 Base model </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="">beit3_base_indomain_patch16_224, xx MB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/beit3_checkpoints/beit3_base_indomain_patch16_224.pth">beit3_base_indomain_patch16_224, 554 MB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" >  BEiT-3 Large model  </th>
-    <th style="text-align:center" > <a href="">beit3_large_indomain_patch16_224, xx GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/beit3_checkpoints/beit3_large_indomain_patch16_224.pth">beit3_large_indomain_patch16_224, 1.5 GB</a> </th>
     </tr>
 </table>
 
