@@ -50,7 +50,10 @@ Any kind discussions are welcomed!
 
 ## News
 
-- **All of the code and models will be released soon!**
+- :fire: **Update on 2025/07/30:** All of the code and models have been released!**
+
+  ! During the code tidying process, some bugs may arise due to changes in variable names. If any issues occur, please raise them in the [issue page](https://github.com/linhuixiao/OneRef/issues), and I will try to resolve them timely.
+
 - :fire: **Update on 2024/12/28: We conducted a Survey of Visual Grounding over the past decade, entitled "Towards Visual Grounding: A Survey" ([Paper](https://arxiv.org/pdf/2412.20206), [Project](https://github.com/linhuixiao/Awesome-Visual-Grounding)), Comments are welcome !!!**
 - :fire: **Update on 2024/10/10: Our grounding work **OneRef** ([paper](https://arxiv.org/abs/2410.08021), [Code](https://github.com/linhuixiao/OneRef)) has been accepted by the top conference NeurIPS 2024 !**
 - **Update on 2024/07/16:** **Our grounding work HiVG ([Publication](https://dl.acm.org/doi/abs/10.1145/3664647.3681071), [Paper](https://openreview.net/pdf?id=NMMyGy1kKZ), [Code](https://github.com/linhuixiao/HiVG)) has been accepted by the top conference ACM MM 2024 !**
@@ -79,11 +82,12 @@ Links:
 
 ## TODO
 
-The code is currently being tidied up, and both the code and model will be made publicly available soon!
+[//]: # (The code is currently being tidied up, and both the code and model will be made publicly available soon!)
 
-- [ ] Release all the checkpoints.
-- [ ] Release the full model code, training and inference code.
+All the code and models for this paper have been released! 
 
+- [x] Release all the checkpoints.
+- [x] Release the full model code, training and inference code.
 
 
 ## Contents
@@ -135,10 +139,11 @@ For more details, please refer to [our paper](https://openreview.net/pdf?id=siPd
 ## Usage
 ### Dependencies
 - Python 3.9.10
-- PyTorch 1.9.0 + cu111 + cp39
+- PyTorch 2.0.1
+- timm 0.6.13
 - Check [requirements.txt](requirements.txt) for other dependencies. 
 
-Our model is **easy to deploy** in a variety of environments and **has been successfully tested** on multiple pytorch versions.
+Our environment is aligned with Beit-3. Besides, our model is **easy to deploy** in a variety of environments and **has been successfully tested** on multiple pytorch versions.
 
 
 ### Image Data Preparation
@@ -242,61 +247,293 @@ Download the above annotations to a disk directory such as `$/path_to_split`; th
 
 ## Pre-trained Checkpoints
 
-### Fully supervised setting
+
+The checkpoints include the <font color=Red>**Base model**</font> and <font color=Red>**Large model**</font> 
+under the <font color=Red>**single-dataset fine-tuning**</font> setting and <font color=Red>**dataset-mixed 
+grounding pretraining**</font> setting with **Both** <font color=Red>**REC**</font> and <font color=Red>**RES**</font> tasks. 
+
+**<font color=Orange>It should be noted that OneRef involves 25 models with a total size of 125GB, and we have made all of these 25 models 
+open source</font>. We ensure that these models can reproduce the results in the paper. If these models fail to reproduce 
+the results or encounter errors, please contact us promptly via email or by raising an issue. 
+We will check and upload the correct models. This might be due to model upload errors or model corruption 
+during disk storage. After all, we trained nearly a hundred models during the research course of this work.**
+
+All the models are publicly available on the [**OneRef Huggingface homepage**](https://huggingface.co/xiaolinhui/OneRef/tree/main). You can freely download the corresponding models on this website.
+
+### REC task: Single-dataset fine-tuning checkpoints download
 
 <table>
     <tr> <!-- line 3 -->
     <th style="text-align:center" > Datasets </th>
     <th style="text-align:center" > RefCOCO </th>
     <th style="text-align:center" > RefCOCO+ </th>
-    <th style="text-align:center" > RefCOCOg-g </th>
     <th style="text-align:center" > RefCOCOg-u </th>
     <th style="text-align:center" > ReferIt </th>
     <th style="text-align:center" > Flickr </th>
-    </tr>
-    <tr> <!-- line 3 -->
-    <th style="text-align:center" > separate </th>
-    <th style="text-align:center" > <a href="todo">model</a> </th>
-    <th style="text-align:center" > <a href="todo">model</a> </th>
-    <th style="text-align:center" > <a href="todo">model</a> </th>
-    <th style="text-align:center" > <a href="todo">model</a> </th>
-    <th style="text-align:center" > <a href="todo">model</a> </th>
-    <th style="text-align:center" > <a href="todo">model</a> </th>
+    </tr> 
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1"> Base model </th> <!-- table head -->
+        <th style="text-align:center" colspan="6"> <a href="https://drive.google.com/file/d/1C64fr7X-snTvZ8MlccPmYZOlkAOhlYpF/view?usp=drive_link"> Google Drive, rec_single_dataset_finetuning_base.zip (for all), ~9.0 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 2 -->
-        <th style="text-align:center" rowspan="1"> url, size </th> <!-- table head -->
-        <th style="text-align:center" colspan="6"> <a href="todo">All of six models (All have not ready)</a>  </th>  <!-- table head -->
+        <th style="text-align:center" rowspan="1"> Base model </th> <!-- table head -->
+        <th style="text-align:center" colspan="6"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_base.zip"> Hugging Face, rec_single_dataset_finetuning_base.zip (for all), ~9.0 GB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1"> Large model </th> <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_unc.pth">finetuning_large_unc, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_unc%2B.pth">finetuning_large_unc+, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_gref_umd.pth">finetuning_large_gref_umd, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_referit.pth">finetuning_large_referit, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_flickr.pth">finetuning_large_flickr, ~8.0 GB </a>  </th>  <!-- table head -->
     </tr>
 </table>
 
-The checkpoints include the Base model and Large mode under the fine-tuning setting and dataset-mixed pretraining setting. 
 
 
-## Training and Evaluation
+### REC task: Mixup grounding pre-training checkpoints download
 
-You just only need to change ```$/path_to_split```, ``` $/path_to_image_data```, ``` $/path_to_output``` to your own file directory to execute the following command.
-The first time we run the command below, it will take some time for the repository to download the CLIP model.
+<table>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > Datasets </th>
+    <th style="text-align:center" > Mixup (RefCOCO/+/g) </th>
+    <th style="text-align:center" > ReferIt </th>
+    <th style="text-align:center" > Flickr </th>
+</tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1"> base model </th> <!-- table head -->
+        <th style="text-align:center" colspan="3"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_pretraining_base.zip">rec_mixup_grounding_pretraining_base.zip, ~6.0 GB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > Large model </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_pretraining_large_unc%2Bg.pth">mixup_pretraining_large_unc+g, ~8.0 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_pretraining_large_referit.pth">mixup_pretraining_large_referit, ~8.0 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_pretraining_large_flickr.pth">mixup_pretraining_large_flickr, ~8.0 GB</a> </th>
+    </tr>
+</table>
 
-1. Training on RefCOCO with fully supervised setting. 
-    The only difference is an additional control flag: ```--sup_type full```
+### RES task: Single-dataset fine-tuning checkpoints download
+
+<table>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > Datasets </th>
+    <th style="text-align:center" > RefCOCO </th>
+    <th style="text-align:center" > RefCOCO+ </th>
+    <th style="text-align:center" > RefCOCOg-u </th>
+    </tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1"> base model </th> <!-- table head -->
+        <th style="text-align:center" colspan="3"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_single_dataset_finetuning_base.zip"> res_single_dataset_finetuning_base.zip, ~6.0 GB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1"> Large model </th> <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_single_dataset_finetuning_large_unc.pth">finetuning_large_unc, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_single_dataset_finetuning_large_unc%2B.pth">finetuning_large_unc+, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_single_dataset_finetuning_large_gref_umd.pth">finetuning_large_gref_umd, ~8.0 GB </a>  </th>  <!-- table head -->
+    </tr>
+</table>
+
+
+
+### RES task: Mixup grounding pre-training checkpoints download
+
+<table>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > Datasets </th>
+    <th style="text-align:center" > Mixup (RefCOCO/+/g) </th>
+    </tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1"> base model </th> <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_mixup_grounding_pretraining_base.zip">res_mixup_pretraining_base.zip, ~1.0 GB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > Large model </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_mixup_grounding_pretraining_large_unc_%2B_g.pth">res_mixup_pretraining_large, ~2.0 GB</a> </th>
+    </tr>
+</table>
+
+
+After downloading all of these checkpoints, you can save them in the following directory, allowing you to train and test 
+the five datasets at once and just using a single script.
+
+```angular2html
+|-- /finetuning_checkpoints (base or large model, rec or res task)
+    ├── flickr
+    │   └── best_checkpoint.pth
+    ├── gref_umd
+    │   └── best_checkpoint.pth
+    ├── referit
+    │   └── best_checkpoint.pth
+    ├── unc
+    │   └── best_checkpoint.pth
+    └── unc+
+        └── best_checkpoint.pth
+
+|-- /mixup_grounding_pretraining (base or large model, rec or res task)
+    └── mixup
+        └── best_checkpoint.pth
+```
+
+
+
+### MRefM pretrained backbone checkpoints download
+
+
+
+ We propose our multimodal **Mask Referring Modeling (MRefM)** paradigm to enhance the model's referring comprehension ability. 
+ Since MRefM aims to improve its general referring comprehension ability through pre-training, it mainly demonstrates its 
+ performance gain under the mixed pre-training setting. In the experiment, the MRefM pre-training **for the REC task** is 
+ mainly carried out through a mixture of the RefCOCO/+/g (short as RefC) and ReferIt datasets. To ensure a fair comparison,
+ the MRefM pre-training **for the RES task** is mainly carried out through a mixture of the RefC datasets. 
+ 
+For MRefM pre-training, the base model took 15 hours on 32 NVIDIA A100 GPUs, while the large model took 50 hours on 
+the same number of GPUs. We provide the MRefM pre-trained checkpoints at the following: 
+
+
+<table>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > MRefM Model for REC </th>
+    <th style="text-align:center" > Pretraining dataset </th>
+    <th style="text-align:center" > Checkpoints </th>
+    </tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1">  Base model  </th> <!-- table head -->
+        <th style="text-align:center" rowspan="1">  RefC,ReferIt </th> <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href=" ">rec_mrefm_base_patch16_384, ~580 MB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > Large model </th>
+        <th style="text-align:center" rowspan="1">  RefC,ReferIt </th> <!-- table head -->
+    <th style="text-align:center" > <a href=" ">rec_mrefm_large_patch16_384, ~1.6 GB</a> </th>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > MRefM Model for RES </th>
+    <th style="text-align:center" > Pretraining dataset </th>
+    <th style="text-align:center" > Checkpoints </th>
+    </tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1">  Base model </th> <!-- table head -->
+        <th style="text-align:center" > RefC </th>
+        <th style="text-align:center" colspan="1"> <a href=" ">res_mrefm_base_patch16_384, ~375 MB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" >  Large model  </th>
+    <th style="text-align:center" > RefC </th>
+    <th style="text-align:center" > <a href=" ">res_mrefm_base_patch16_384, ~1.6 GB</a> </th>
+    </tr>
+</table>
+
+
+### Original BEiT-3 checkpoints download
+
+In order to facilitate the reproducibility of the MRefM pre-training results and to achieve transferability in non-MRefM settings,
+we also provide the original BEiT-3 model as follows. You can download it from the table below or from 
+the [BEiT-3 official repository](https://github.com/microsoft/unilm/tree/master/beit3).
+
+
+<table>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > BEiT-3 original model </th>
+    <th style="text-align:center" > Checkpoints </th>
+    </tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1">  Sentencepiece model (Tokenizer) </th> <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="">sp3 Sentencepiece model, xx MB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1">  MIM VQKD model </th> <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="">vqkd model, xx MB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1"> BEiT-3 Base model </th> <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="">beit3_base_indomain_patch16_224, xx MB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" >  BEiT-3 Large model  </th>
+    <th style="text-align:center" > <a href="">beit3_large_indomain_patch16_224, xx GB</a> </th>
+    </tr>
+</table>
+
+
+## REC and RES Transfer Training and Evaluation
+
+As shown below, we have provided complete evaluation, training, and pre-training scripts in the [train_and_eval_script](train_and_eval_script). 
+
+```angular2html
+train_and_eval_script
+├── eval_rec_mixup_grounding_pretraining_base.sh
+├── eval_rec_mixup_grounding_pretraining_large.sh
+├── eval_rec_single_dataset_finetuning_base.sh
+├── eval_rec_single_dataset_finetuning_large.sh
+├── eval_res_mixup_grounding_pretraining_base.sh
+├── eval_res_mixup_grounding_pretraining_large.sh
+├── eval_res_single_dataset_finetuning_base.sh
+├── eval_res_single_dataset_finetuning_large.sh
+├── MRefM_pretraining
+│   ├── rec_mrefm_pretraining_base.sh
+│   ├── rec_mrefm_pretraining_large.sh
+│   ├── res_mrefm_pretraining_base.sh
+│   └── res_mrefm_pretraining_large.sh
+├── submit_for_multi_node_pretraining
+│   ├── get_master_ip.sh
+│   ├── master_ip.sh
+│   └── train_and_eval_for_multi_node.sh
+├── train_rec_mixup_grounding_pretraining_base.sh
+├── train_rec_mixup_grounding_pretraining_large.sh
+├── train_rec_single_dataset_finetuning_base.sh
+├── train_rec_single_dataset_finetuning_large.sh
+├── train_res_mixup_grounding_pretraining_base.sh
+├── train_res_mixup_grounding_pretraining_large.sh
+├── train_res_single_dataset_finetuning_base.sh
+└── train_res_single_dataset_finetuning_large.sh
+```
+
+You only need to modify the corresponding paths (change ```$/path_to_split```, ``` $/path_to_image_data```, ``` $/path_to_output``` to your own file directory), 
+and then execute the corresponding scripts with the ```bash``` command to test and train the relevant models. 
+
+1. Training on RefCOCO with single dataset finetuning setting. 
+    
     ```
     CUDA_VISIBLE_DEVICES=3,4,5,6,7 python -m torch.distributed.launch --nproc_per_node=5 --master_port 28887 --use_env train_clip_vg.py --num_workers 32 --epochs 120 --batch_size 64 --lr 0.00025  --lr_scheduler cosine --aug_crop --aug_scale --aug_translate    --imsize 224 --max_query_len 77  --sup_type full --dataset unc      --data_root $/path_to_image_data --split_root $/path_to_split --output_dir $/path_to_output/output_v01/unc;
     ```
-    Please refer to [train_and_eval_script/train_and_eval_full_sup.sh](train_and_eval_script/train_and_eval_full_sup.sh) for training commands on other datasets.
+    Please refer to [train_and_eval_script/train_rec_single_dataset_finetuning_base.sh](train_and_eval_script/train_rec_single_dataset_finetuning_base.sh) for training commands on other datasets.
 
-2. Evaluation on RefCOCO. The instructions are the same for the fully supervised Settings.
+2. Evaluation on RefCOCO. 
     ```
     CUDA_VISIBLE_DEVICES=2,3,4,5,6,7 python -m torch.distributed.launch --nproc_per_node=6 --master_port 28888 --use_env eval.py --num_workers 2 --batch_size 128    --dataset unc      --imsize 224 --max_query_len 77 --data_root $/path_to_image_data --split_root $/path_to_split --eval_model $/path_to_output/output_v01/unc/best_checkpoint.pth      --eval_set val    --output_dir $/path_to_output/output_v01/unc;
     ```
-    Please refer to [train_and_eval_script/train_and_eval_unsup.sh](train_and_eval_script/train_and_eval_unsup.sh) for evaluation commands on other splits or datasets.
+    Please refer to [train_and_eval_script/eval_rec_single_dataset_finetuning_base.sh](train_and_eval_script/eval_rec_single_dataset_finetuning_base.sh) for evaluation commands on other splits or datasets.
     
-3. We strongly recommend to use the following commands to training or testing with different datasets and splits, 
-    which will significant reduce the training workforce.
+3. We strongly recommend to use the ```bash``` commands to training or testing with different datasets and splits, 
+    which will significant reduce the training workforce. such as:
     ```
-    bash train_and_eval_script/train_and_eval_full_sup.sh
+    bash train_and_eval_script/train_rec_single_dataset_finetuning_base.sh
     ```
 
+ **It should be noted that**, due to the limited number of data samples in the single-dataset setting, MRefM did not yield significant improvements in performance. To streamline the training process and facilitate the reproducibility of our work, we provide a training process without MRefM pre-training specifically for the single-dataset scenario.
 
+
+## MRefM Pre-training
+
+### 1. One-node Pre-training
+   Single-node means that only one multi-card server is needed. You just need to run the following command. This training is not much different from the fine-tuning training.
+
+    CUDA_VISIBLE_DEVICES=3,4,5,6,7 python -m torch.distributed.launch --nproc_per_node=5 --master_port 28887 --use_env train_clip_vg.py --num_workers 32 --epochs 120 --batch_size 64 --lr 0.00025  --lr_scheduler cosine --aug_crop --aug_scale --aug_translate    --imsize 224 --max_query_len 77  --sup_type full --dataset unc      --data_root $/path_to_image_data --split_root $/path_to_split --output_dir $/path_to_output/output_v01/unc;
+
+   Or using the bash command as follows:
+
+```angular2html
+bash train_and_eval_script/MRefM_pretraining/rec_mrefm_pretraining_base.sh
+```
+
+### 2. Multi-node Pre-training
+
+ Multi-node training means that multiple multi-card servers are required. You need to use the scripts in the [train_and_eval_script/submit_for_multi_node_pretraining](train_and_eval_script/submit_for_multi_node_pretraining) directory to start the process on multiple servers. For detailed operations, you can refer to the relevant tutorials.
 
 ## Results
 
