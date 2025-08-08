@@ -39,7 +39,9 @@
 **<p align="center"> A Comparison between OneRef model and the mainstream REC/RES architectures. </p>**
 
 This repository is the official Pytorch implementation for the paper [**OneRef: Unified One-tower Expression Grounding 
-and Segmentation with Mask Referring Modeling**](https://openreview.net/pdf?id=siPdcro6uD), which is an advanced version
+and Segmentation with Mask Referring Modeling**](https://openreview.net/pdf?id=siPdcro6uD) 
+([Publication](https://proceedings.neurips.cc/paper_files/paper/2024/file/fcd812a51b8f8d05cfea22e3c9c4b369-Paper-Conference.pdf), 
+[Github Code](https://github.com/linhuixiao/OneRef), [HuggingFace model](https://huggingface.co/xiaolinhui/OneRef)), which is an advanced version
 of our preliminary work **HiVG** ([Publication](https://dl.acm.org/doi/abs/10.1145/3664647.3681071), [Paper](https://openreview.net/pdf?id=NMMyGy1kKZ), 
 [Code](https://github.com/linhuixiao/HiVG)) and **CLIP-VG** ([Publication](https://ieeexplore.ieee.org/abstract/document/10269126),
 [Paper](https://arxiv.org/pdf/2305.08685), [Code](https://github.com/linhuixiao/CLIP-VG)). 
@@ -56,7 +58,7 @@ Any kind discussions are welcomed!
   :exclamation: During the code tidying process, some bugs may arise due to changes in variable names. If any issues occur, please raise them in the [issue page](https://github.com/linhuixiao/OneRef/issues), and I will try to resolve them timely.
 
 - :fire: **Update on 2024/12/28: We conducted a Survey of Visual Grounding over the past decade, entitled "Towards Visual Grounding: A Survey" ([Paper](https://arxiv.org/pdf/2412.20206), [Project](https://github.com/linhuixiao/Awesome-Visual-Grounding)), Comments are welcome !!!**
-- :fire: **Update on 2024/10/10: Our grounding work **OneRef** ([paper](https://arxiv.org/abs/2410.08021), [Code](https://github.com/linhuixiao/OneRef)) has been accepted by the top conference NeurIPS 2024 !**
+- :fire: **Update on 2024/10/10: Our grounding work **OneRef** ([Paper](https://arxiv.org/abs/2410.08021), [Code](https://github.com/linhuixiao/OneRef), [Model](https://huggingface.co/xiaolinhui/OneRef)) has been accepted by the top conference NeurIPS 2024 !**
 - **Update on 2024/07/16:** **Our grounding work HiVG ([Publication](https://dl.acm.org/doi/abs/10.1145/3664647.3681071), [Paper](https://openreview.net/pdf?id=NMMyGy1kKZ), [Code](https://github.com/linhuixiao/HiVG)) has been accepted by the top conference ACM MM 2024 !**
 - **Update on 2023/9/25:** **Our grounding work CLIP-VG ([paper](https://ieeexplore.ieee.org/abstract/document/10269126), [Code](https://github.com/linhuixiao/CLIP-VG)) has been accepted by the top journal IEEE Transaction on Multimedia (2023)!** 
 
