@@ -199,7 +199,7 @@ some of the dataset formats. You need to download our text annotation files from
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> url, size </th> <!-- table head -->
-        <th style="text-align:center" colspan="8"> <a href="https://huggingface.co/xiaolinhui/OneRef/tree/main/text_box_annotation">All of six datasets</a>,  89.0MB </th>  <!-- table head -->
+        <th style="text-align:center" colspan="8"> <a href="https://huggingface.co/xiaolinhui/OneRef/tree/main/text_box_annotation">All of six datasets</a>,  ~400.0MB </th>  <!-- table head -->
 </tr>
 </table>
 
@@ -255,7 +255,7 @@ The checkpoints include the <font color=Red>**Base model**</font> and <font colo
 under the <font color=Red>**single-dataset fine-tuning**</font> setting and <font color=Red>**dataset-mixed 
 grounding pretraining**</font> setting with **Both** <font color=Red>**REC**</font> and <font color=Red>**RES**</font> tasks. 
 
-**<font color=Orange>It should be noted that OneRef involves 25 models with a total size of 125GB, and we have made all of these 25 models 
+**<font color=Orange>It should be noted that OneRef involves 29 models with a total size of 125GB, and we have made all of these 29 models 
 open source</font>. We ensure that these models can reproduce the results in the paper. If these models fail to reproduce 
 the results or encounter errors, please contact us promptly via email or by raising an issue. 
 We will check and upload the correct models. This might be due to model upload errors or model corruption 
@@ -315,6 +315,25 @@ All the models are publicly available on the [**OneRef Huggingface homepage**](h
     <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_pretraining_large_flickr.pth">mixup_pretraining_large_flickr, ~8.0 GB</a> </th>
     </tr>
 </table>
+
+
+### REC task: Ultimate performance prediction in our [Grounding Survey paper](https://arxiv.org/pdf/2412.20206)
+
+<table>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > Datasets </th>
+    <th style="text-align:center" > Mixup (RefCOCO/+/g) </th>
+</tr>
+    <tr> <!-- line 2 -->
+        <th style="text-align:center" rowspan="1"> base model </th> <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_ultimate_performance_base_in_the_survey.zip">rec_mixup_grounding_ultimate_performance_base.zip, ~6.0 GB </a>  </th>  <!-- table head -->
+    </tr>
+    <tr> <!-- line 3 -->
+    <th style="text-align:center" > Large model </th>
+    <th style="text-align:center" > <a href="">rec_mixup_grounding_ultimate_performance_large, ~8.0 GB</a> </th>
+    </tr>
+</table>
+
 
 ### RES task: Single-dataset fine-tuning checkpoints download
 
@@ -403,12 +422,12 @@ the same number of GPUs. We provide the MRefM pre-trained checkpoints at the fol
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  Base model  </th> <!-- table head -->
         <th style="text-align:center" rowspan="1">  RefC,ReferIt </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href=" ">rec_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/mrefm_pretrain_patch16_384/rec_mrefm_pretrain_base_patch16_384.pth">rec_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" > Large model </th>
         <th style="text-align:center" rowspan="1">  RefC,ReferIt </th> <!-- table head -->
-    <th style="text-align:center" > <a href=" ">rec_mrefm_large_patch16_384, ~7 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/mrefm_pretrain_patch16_384/rec_mrefm_pretrain_large_patch16_384.pth">rec_mrefm_large_patch16_384, ~7 GB</a> </th>
     </tr>
 </table>
 
@@ -423,12 +442,12 @@ the same number of GPUs. We provide the MRefM pre-trained checkpoints at the fol
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  Base model </th> <!-- table head -->
         <th style="text-align:center" > RefC </th>
-        <th style="text-align:center" colspan="1"> <a href=" ">res_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/mrefm_pretrain_patch16_384/res_mrefm_pretrain_base_patch16_384.pth">res_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" >  Large model  </th>
     <th style="text-align:center" > RefC </th>
-    <th style="text-align:center" > <a href=" ">res_mrefm_base_patch16_384, ~7 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/mrefm_pretrain_patch16_384/res_mrefm_pretrain_large_patch16_384.pth">res_mrefm_base_patch16_384, ~7 GB</a> </th>
     </tr>
 </table>
 
