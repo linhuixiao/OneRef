@@ -211,7 +211,7 @@ and Mixup2 are used the val and testA file from RefCOCOg. <u>The training data i
 Download the above annotations to a disk directory such as `$/path_to_split`; then will have the following similar directory structure:
 
 ```angular2html
-|-- /full_sup_data
+|-- /single_dataset
     ├── flickr
     │   ├── flickr_test.pth
     │   ├── flickr_train.pth
@@ -223,14 +223,6 @@ Download the above annotations to a disk directory such as `$/path_to_split`; th
     │   ├── gref_umd_test.pth
     │   ├── gref_umd_train.pth
     │   └── gref_umd_val.pth
-    ├── mixup_with_refc
-    │   ├── mixup_test.pth
-    │   ├── mixup_train.pth
-    │   └── mixup_val.pth
-    ├── mixup_with_refc_referit
-    │   ├── mixup_test.pth
-    │   ├── mixup_train.pth
-    │   └── mixup_val.pth
     ├── referit
     │   ├── referit_test.pth
     │   ├── referit_train.pth
@@ -245,6 +237,16 @@ Download the above annotations to a disk directory such as `$/path_to_split`; th
         ├── unc+_testB.pth
         ├── unc+_train.pth
         └── unc+_val.pth
+|-- /mixup_with_refc
+    ├── mixup
+    │   ├── mixup_test.pth
+    │   ├── mixup_train.pth
+    │   └── mixup_val.pth
+|-- /mixup_with_refc_referit
+    ├── mixup
+    │   ├── mixup_test.pth
+    │   ├── mixup_train.pth
+    │   └── mixup_val.pth
 ```
 
 
