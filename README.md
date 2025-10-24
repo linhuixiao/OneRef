@@ -49,6 +49,16 @@ of our preliminary work **HiVG** ([Publication](https://dl.acm.org/doi/abs/10.11
 If you have any questions, please feel free to open an issue or contact me with emails: <xiaolinhui16@mails.ucas.ac.cn>.
 Any kind discussions are welcomed!
 
+
+<h3 align="left">
+Links: 
+<a href="https://arxiv.org/abs/2410.08021">ArXiv</a>, 
+<a href="https://neurips.cc/virtual/2024/poster/93378">NeurIPS 2024</a>,
+<a href="https://huggingface.co/xiaolinhui/OneRef">Hugging Face</a>,
+<a href="https://mp.weixin.qq.com/s/khcNsfFOck67d9ADwId8Rg">论文中文解读</a>
+</h3>
+
+
 **Please leave a <font color='orange'>STAR ⭐</font> if you like this project!**
 
 ## News
@@ -75,14 +85,6 @@ If you find our work helpful for your research, please consider citing the follo
   year={2024}
 }
 ```
-
-<h3 align="left">
-Links: 
-<a href="https://arxiv.org/abs/2410.08021">ArXiv</a>, 
-<a href="https://neurips.cc/virtual/2024/poster/93378">NeurIPS 2024</a>,
-<a href="https://huggingface.co/xiaolinhui/OneRef">Hugging Face</a>,
-<a href="https://mp.weixin.qq.com/s/khcNsfFOck67d9ADwId8Rg">论文中文解读</a>
-</h3>
 
 
 ## TODO
