@@ -80,6 +80,7 @@ If you find our work helpful for your research, please consider citing the follo
 Links: 
 <a href="https://arxiv.org/abs/2410.08021">ArXiv</a>, 
 <a href="https://neurips.cc/virtual/2024/poster/93378">NeurIPS 2024</a>,
+<a href="https://huggingface.co/xiaolinhui/OneRef">Hugging Face</a>,
 <a href="https://mp.weixin.qq.com/s/khcNsfFOck67d9ADwId8Rg">论文中文解读</a>
 </h3>
 
