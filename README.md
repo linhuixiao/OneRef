@@ -63,7 +63,7 @@ Links:
 
 ## News
 
-- 🔥🔥🔥 **Our Grounding survey has been accepted by TPAMI on October 30, 2025 !!!**
+- 🔥🔥🔥 **Our Grounding survey ([TPAMI](https://doi.org/10.1109/TPAMI.2025.3630635), [Arxiv](https://arxiv.org/abs/2412.20206), [Project](https://github.com/linhuixiao/Awesome-Visual-Grounding)) has been accepted by TPAMI on October 30, 2025 !!!**
 
 - :fire: **Update on 2025/07/30:** **All of the code and models of OneRef have been released!**
 
