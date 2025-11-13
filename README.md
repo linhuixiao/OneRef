@@ -41,7 +41,7 @@
 This repository is the official Pytorch implementation for the paper [**OneRef: Unified One-tower Expression Grounding 
 and Segmentation with Mask Referring Modeling**](https://openreview.net/pdf?id=siPdcro6uD) 
 ([Publication](https://proceedings.neurips.cc/paper_files/paper/2024/file/fcd812a51b8f8d05cfea22e3c9c4b369-Paper-Conference.pdf), 
-[Github Code](https://github.com/linhuixiao/OneRef), [HuggingFace model](https://huggingface.co/xiaolinhui/OneRef)), which is an advanced version
+[Github Code](https://github.com/linhuixiao/OneRef), [HuggingFace model](https://huggingface.co/linhuixiao/OneRef)), which is an advanced version
 of our preliminary work **HiVG** ([Publication](https://dl.acm.org/doi/abs/10.1145/3664647.3681071), [Paper](https://openreview.net/pdf?id=NMMyGy1kKZ), 
 [Code](https://github.com/linhuixiao/HiVG)) and **CLIP-VG** ([Publication](https://ieeexplore.ieee.org/abstract/document/10269126),
 [Paper](https://arxiv.org/pdf/2305.08685), [Code](https://github.com/linhuixiao/CLIP-VG)). 
@@ -54,7 +54,7 @@ Any kind discussions are welcomed!
 Links: 
 <a href="https://arxiv.org/abs/2410.08021">ArXiv</a>, 
 <a href="https://neurips.cc/virtual/2024/poster/93378">NeurIPS 2024</a>,
-<a href="https://huggingface.co/xiaolinhui/OneRef">Hugging Face</a>,
+<a href="https://huggingface.co/linhuixiao/OneRef">Hugging Face</a>,
 <a href="https://mp.weixin.qq.com/s/khcNsfFOck67d9ADwId8Rg">论文中文解读</a>
 </h3>
 
@@ -70,7 +70,7 @@ Links:
   :exclamation: During the code tidying process, some bugs may arise due to changes in variable names. If any issues occur, please raise them in the [issue page](https://github.com/linhuixiao/OneRef/issues), and I will try to resolve them timely.
 
 - :fire: **Update on 2024/12/28: We conducted a Survey of Visual Grounding over the past decade, entitled "Towards Visual Grounding: A Survey" ([Paper](https://arxiv.org/pdf/2412.20206), [Project](https://github.com/linhuixiao/Awesome-Visual-Grounding)), Comments are welcome !!!**
-- :fire: **Update on 2024/10/10: Our advanced grounding work **OneRef** ([Paper](https://arxiv.org/abs/2410.08021), [Code](https://github.com/linhuixiao/OneRef), [Model](https://huggingface.co/xiaolinhui/OneRef)) has been accepted by the top conference NeurIPS 2024 !**
+- :fire: **Update on 2024/10/10: Our advanced grounding work **OneRef** ([Paper](https://arxiv.org/abs/2410.08021), [Code](https://github.com/linhuixiao/OneRef), [Model](https://huggingface.co/linhuixiao/OneRef)) has been accepted by the top conference NeurIPS 2024 !**
 - **Update on 2024/07/16:** **Our advanced grounding work HiVG ([Publication](https://dl.acm.org/doi/abs/10.1145/3664647.3681071), [Paper](https://openreview.net/pdf?id=NMMyGy1kKZ), [Code](https://github.com/linhuixiao/HiVG)) has been accepted by the top conference ACM MM 2024 !**
 - **Update on 2023/9/25:** **Our grounding work CLIP-VG ([paper](https://ieeexplore.ieee.org/abstract/document/10269126), [Code](https://github.com/linhuixiao/CLIP-VG)) has been accepted by the top journal IEEE Transaction on Multimedia (2023)!** 
 
@@ -190,7 +190,7 @@ Finally, the `$/path_to_image_data` folder will have the following structure:
 The labels in the fully supervised scenario is consistent with previous works such as [CLIP-VG](https://github.com/linhuixiao/CLIP-VG).
 
 :star: As we need to conduct pre-training with mixed datasets, we have shuffled the order of the datasets and unified 
-some of the dataset formats. You need to download our text annotation files from the [HuggingFace homepage](https://huggingface.co/xiaolinhui/OneRef/tree/main/text_box_annotation).
+some of the dataset formats. You need to download our text annotation files from the [HuggingFace homepage](https://huggingface.co/linhuixiao/OneRef/tree/main/text_box_annotation).
 
 ### Fully supervised setting
 <table>
@@ -207,7 +207,7 @@ some of the dataset formats. You need to download our text annotation files from
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> url, size </th> <!-- table head -->
-        <th style="text-align:center" colspan="8"> <a href="https://huggingface.co/xiaolinhui/OneRef/tree/main/text_box_annotation">All of six datasets</a>,  ~400.0MB </th>  <!-- table head -->
+        <th style="text-align:center" colspan="8"> <a href="https://huggingface.co/linhuixiao/OneRef/tree/main/text_box_annotation">All of six datasets</a>,  ~400.0MB </th>  <!-- table head -->
 </tr>
 </table>
 
@@ -271,8 +271,8 @@ the results or encounter errors, please contact us promptly via email or by rais
 We will check and upload the correct models. This might be due to model upload errors or model corruption 
 during disk storage. After all, we trained nearly a hundred models during the research course of this work.**
 
-<a href="https://huggingface.co/xiaolinhui/OneRef/tree/main"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/huggingface-color.png" /><img height="36px" width="36px" src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/huggingface-color.png" /></picture><br/>HuggingFace： 
-All the models are publicly available on the [**OneRef Huggingface homepage**](https://huggingface.co/xiaolinhui/OneRef/tree/main). You can freely download the corresponding models on this website.
+<a href="https://huggingface.co/linhuixiao/OneRef/tree/main"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/huggingface-color.png" /><img height="36px" width="36px" src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/huggingface-color.png" /></picture><br/>HuggingFace： 
+All the models are publicly available on the [**OneRef Huggingface homepage**](https://huggingface.co/linhuixiao/OneRef/tree/main). You can freely download the corresponding models on this website.
 
 ### REC task: Single-dataset fine-tuning checkpoints download
 
@@ -291,15 +291,15 @@ All the models are publicly available on the [**OneRef Huggingface homepage**](h
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> Base model </th> <!-- table head -->
-        <th style="text-align:center" colspan="6"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_base.zip"> Hugging Face, rec_single_dataset_finetuning_base.zip (for all), ~9.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="6"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_single_dataset_finetuning_base.zip"> Hugging Face, rec_single_dataset_finetuning_base.zip (for all), ~9.0 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> Large model </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_unc.pth">finetuning_large_unc, ~8.0 GB </a>  </th>  <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_unc%2B.pth">finetuning_large_unc+, ~8.0 GB </a>  </th>  <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_gref_umd.pth">finetuning_large_gref_umd, ~8.0 GB </a>  </th>  <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_referit.pth">finetuning_large_referit, ~8.0 GB </a>  </th>  <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_single_dataset_finetuning_large_flickr.pth">finetuning_large_flickr, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_single_dataset_finetuning_large_unc.pth">finetuning_large_unc, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_single_dataset_finetuning_large_unc%2B.pth">finetuning_large_unc+, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_single_dataset_finetuning_large_gref_umd.pth">finetuning_large_gref_umd, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_single_dataset_finetuning_large_referit.pth">finetuning_large_referit, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_single_dataset_finetuning_large_flickr.pth">finetuning_large_flickr, ~8.0 GB </a>  </th>  <!-- table head -->
     </tr>
 </table>
 
@@ -316,13 +316,13 @@ All the models are publicly available on the [**OneRef Huggingface homepage**](h
 </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> base model </th> <!-- table head -->
-        <th style="text-align:center" colspan="3"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_pretraining_base.zip">rec_mixup_grounding_pretraining_base.zip, ~6.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="3"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_mixup_grounding_pretraining_base.zip">rec_mixup_grounding_pretraining_base.zip, ~6.0 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" > Large model </th>
-    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_pretraining_large_unc%2Bg.pth">mixup_pretraining_large_unc+g, ~8.0 GB</a> </th>
-    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_pretraining_large_referit.pth">mixup_pretraining_large_referit, ~8.0 GB</a> </th>
-    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_pretraining_large_flickr.pth">mixup_pretraining_large_flickr, ~8.0 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_mixup_grounding_pretraining_large_unc%2Bg.pth">mixup_pretraining_large_unc+g, ~8.0 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_mixup_grounding_pretraining_large_referit.pth">mixup_pretraining_large_referit, ~8.0 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_mixup_grounding_pretraining_large_flickr.pth">mixup_pretraining_large_flickr, ~8.0 GB</a> </th>
     </tr>
 </table>
 
@@ -336,7 +336,7 @@ All the models are publicly available on the [**OneRef Huggingface homepage**](h
 </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> base model </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/rec_mixup_grounding_ultimate_performance_base_in_the_survey.zip">rec_mixup_grounding_ultimate_performance_base.zip, ~6.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/rec_mixup_grounding_ultimate_performance_base_in_the_survey.zip">rec_mixup_grounding_ultimate_performance_base.zip, ~6.0 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" > Large model </th>
@@ -356,13 +356,13 @@ All the models are publicly available on the [**OneRef Huggingface homepage**](h
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> base model </th> <!-- table head -->
-        <th style="text-align:center" colspan="3"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_single_dataset_finetuning_base.zip"> res_single_dataset_finetuning_base.zip, ~6.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="3"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/res_single_dataset_finetuning_base.zip"> res_single_dataset_finetuning_base.zip, ~6.0 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> Large model </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_single_dataset_finetuning_large_unc.pth">finetuning_large_unc, ~8.0 GB </a>  </th>  <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_single_dataset_finetuning_large_unc%2B.pth">finetuning_large_unc+, ~8.0 GB </a>  </th>  <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_single_dataset_finetuning_large_gref_umd.pth">finetuning_large_gref_umd, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/res_single_dataset_finetuning_large_unc.pth">finetuning_large_unc, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/res_single_dataset_finetuning_large_unc%2B.pth">finetuning_large_unc+, ~8.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/res_single_dataset_finetuning_large_gref_umd.pth">finetuning_large_gref_umd, ~8.0 GB </a>  </th>  <!-- table head -->
     </tr>
 </table>
 
@@ -377,11 +377,11 @@ All the models are publicly available on the [**OneRef Huggingface homepage**](h
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> base model </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_mixup_grounding_pretraining_base.zip">res_mixup_pretraining_base.zip, ~1.0 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/res_mixup_grounding_pretraining_base.zip">res_mixup_pretraining_base.zip, ~1.0 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" > Large model </th>
-    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/res_mixup_grounding_pretraining_large_unc_%2B_g.pth">res_mixup_pretraining_large, ~2.0 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/res_mixup_grounding_pretraining_large_unc_%2B_g.pth">res_mixup_pretraining_large, ~2.0 GB</a> </th>
     </tr>
 </table>
 
@@ -420,7 +420,7 @@ the five datasets at once and just using a single script.
  the MRefM pre-training **for the RES task** is mainly carried out through a mixture of the RefC datasets. 
  
 For MRefM pre-training, the base model took 15 hours on 32 NVIDIA A100 GPUs, while the large model took 50 hours on 
-the same number of GPUs. We provide the MRefM pre-trained checkpoints at the following: All model are placed in [HuggingFace Page](https://huggingface.co/xiaolinhui/OneRef/tree/main)
+the same number of GPUs. We provide the MRefM pre-trained checkpoints at the following: All model are placed in [HuggingFace Page](https://huggingface.co/linhuixiao/OneRef/tree/main)
 
 
 <table>
@@ -432,12 +432,12 @@ the same number of GPUs. We provide the MRefM pre-trained checkpoints at the fol
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  Base model  </th> <!-- table head -->
         <th style="text-align:center" rowspan="1">  RefC,ReferIt </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/mrefm_pretrain_patch16_384/rec_mrefm_pretrain_base_patch16_384.pth">rec_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/mrefm_pretrain_patch16_384/rec_mrefm_pretrain_base_patch16_384.pth">rec_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" > Large model </th>
         <th style="text-align:center" rowspan="1">  RefC,ReferIt </th> <!-- table head -->
-    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/mrefm_pretrain_patch16_384/rec_mrefm_pretrain_large_patch16_384.pth">rec_mrefm_large_patch16_384, ~7 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/mrefm_pretrain_patch16_384/rec_mrefm_pretrain_large_patch16_384.pth">rec_mrefm_large_patch16_384, ~7 GB</a> </th>
     </tr>
 </table>
 
@@ -452,12 +452,12 @@ the same number of GPUs. We provide the MRefM pre-trained checkpoints at the fol
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  Base model </th> <!-- table head -->
         <th style="text-align:center" > RefC </th>
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/mrefm_pretrain_patch16_384/res_mrefm_pretrain_base_patch16_384.pth">res_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/mrefm_pretrain_patch16_384/res_mrefm_pretrain_base_patch16_384.pth">res_mrefm_base_patch16_384, ~2 GB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" >  Large model  </th>
     <th style="text-align:center" > RefC </th>
-    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/mrefm_pretrain_patch16_384/res_mrefm_pretrain_large_patch16_384.pth">res_mrefm_base_patch16_384, ~7 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/mrefm_pretrain_patch16_384/res_mrefm_pretrain_large_patch16_384.pth">res_mrefm_base_patch16_384, ~7 GB</a> </th>
     </tr>
 </table>
 
@@ -476,19 +476,19 @@ the [BEiT-3 official repository](https://github.com/microsoft/unilm/tree/master/
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  Sentencepiece model (Tokenizer) </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/beit3_checkpoints/beit3.spm">sp3 Sentencepiece model, 1 MB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/beit3_checkpoints/beit3.spm">sp3 Sentencepiece model, 1 MB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1">  MIM VQKD model </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/beit3_checkpoints/vqkd_encoder_base_decoder_3x768x12_clip-d5036aa7.pth">vqkd model, 438 MB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/beit3_checkpoints/vqkd_encoder_base_decoder_3x768x12_clip-d5036aa7.pth">vqkd model, 438 MB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 2 -->
         <th style="text-align:center" rowspan="1"> BEiT-3 Base model </th> <!-- table head -->
-        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/beit3_checkpoints/beit3_base_indomain_patch16_224.pth">beit3_base_indomain_patch16_224, 554 MB </a>  </th>  <!-- table head -->
+        <th style="text-align:center" colspan="1"> <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/beit3_checkpoints/beit3_base_indomain_patch16_224.pth">beit3_base_indomain_patch16_224, 554 MB </a>  </th>  <!-- table head -->
     </tr>
     <tr> <!-- line 3 -->
     <th style="text-align:center" >  BEiT-3 Large model  </th>
-    <th style="text-align:center" > <a href="https://huggingface.co/xiaolinhui/OneRef/blob/main/beit3_checkpoints/beit3_large_indomain_patch16_224.pth">beit3_large_indomain_patch16_224, 1.5 GB</a> </th>
+    <th style="text-align:center" > <a href="https://huggingface.co/linhuixiao/OneRef/blob/main/beit3_checkpoints/beit3_large_indomain_patch16_224.pth">beit3_large_indomain_patch16_224, 1.5 GB</a> </th>
     </tr>
 </table>
 
